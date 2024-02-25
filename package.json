@@ -8,21 +8,22 @@
   "scripts": {
     "dev": "concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\"",
     "build": "next build && electron-builder",
+    "package": "electron-builder -p always",
     "start": "next start",
     "lint": "next lint"
   },
-  "build":{
-    "publish":[
+  "build": {
+    "publish": [
       {
-        "provider":"github",
-        "owner":"bookzaat06",
-        "repo":"book_ac"
+        "provider": "github",
+        "owner": "bookzaat06",
+        "repo": "book_ac"
       }
     ]
-
   },
   "dependencies": {
     "electron-serve": "^1.3.0",
+    "electron-updater": "^6.1.8",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",

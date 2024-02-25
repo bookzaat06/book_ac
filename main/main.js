@@ -1,6 +1,8 @@
 const { app, BrowserWindow  } = require("electron");
 const serve = require("electron-serve");
 const path = require("path");
+const { autoUpdater } = require("electron-updater")
+
 // const { updateElectronApp } = require('update-electron-app')
 
 const appServe = app.isPackaged ? serve({
@@ -63,6 +65,8 @@ const createWindow = () => {
 
 app.on("ready", () => {
     createWindow();
+    autoUpdater.checkForUpdatesAndNotify()
+
 });
 
 app.on("window-all-closed", () => {
