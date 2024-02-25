@@ -8,14 +8,14 @@ const appServe = app.isPackaged ? serve({
 }) : null;
 
    
-updateElectronApp({
-  updateSource: {
-    type: UpdateSourceType.ElectronPublicUpdateService,
-    repo: 'bookzaat06/book_ac'
-  },
-  updateInterval: '1 hour',
-  logger: require('electron-log')
-})
+// updateElectronApp({
+//   updateSource: {
+//     type: UpdateSourceType.ElectronPublicUpdateService,
+//     repo: 'bookzaat06/book_ac'
+//   },
+//   updateInterval: '1 hour',
+//   logger: require('electron-log')
+// })
 
 const createWindow = () => {
   const win = new BrowserWindow({
