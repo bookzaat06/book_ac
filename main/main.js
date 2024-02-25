@@ -7,7 +7,7 @@ const appServe = app.isPackaged ? serve({
   directory: path.join(__dirname, "../out")
 }) : null;
 
-   
+    
 // updateElectronApp({
 //   updateSource: {
 //     type: UpdateSourceType.ElectronPublicUpdateService,
